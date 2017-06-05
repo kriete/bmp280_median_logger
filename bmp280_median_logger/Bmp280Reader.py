@@ -27,6 +27,7 @@ class Bmp280Reader:
     """
     def __init__(self, filename):
         self.filename = filename
+        self.sensor = BMP280.BMP280()
         self.initiated = False
         self.next_read_call = time.time()
         self.next_write_call = time.time()
@@ -42,7 +43,10 @@ class Bmp280Reader:
         self.read_data()
 
     def read_data(self):
-        self.storage.iloc[self.index] = [np.random.randint(30, size=1)[0], np.random.randint(10, size=1)[0]+1000]
+        temp = self.sensor.read_temperature()
+        pres = self.sensor.read_pressure()
+        #self.storage.iloc[self.index] = [np.random.randint(30, size=1)[0], np.random.randint(10, size=1)[0]+1000]
+        self.storage.iloc[self.index] = [temp, pres]
         self.index = self.index + 1
         self.next_read_call = self.next_read_call + 1.0
         t = threading.Timer(self.next_read_call - time.time(), self.read_data)
