@@ -41,3 +41,7 @@ or specify the filename with
 ```sh
 $ python main.py bmpdata.txt
 ```
+
+### Example Logfile:
+CSV 1-minute logfile:
+![](/img/log.jpg?raw=true "CSV Logfile")
