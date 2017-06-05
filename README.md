@@ -21,8 +21,8 @@ $ cd Adafruit_Python_GPIO
 $ sudo python setup.py install
 ```
 
-##### Logger
-Navigate to the directory and run the pip install with the -e flag (or not - just useful in case of own changes to the package)
+##### BMP280 Logger
+Navigate to the median logger directory and run the pip install with the -e flag (or not - just useful in case of own changes to the package)
 ```sh
 $ pip install -e .
 ```
