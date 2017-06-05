@@ -13,7 +13,7 @@ OrangePi setup with BMP280:
 
 ### Installation
 ##### Requirements
-This package requires numpy and pandas to run. Besides, it uses the Adafruit BMP280 python library (originating from https://github.com/bastienwirtz/Adafruit_Python_BMP). This file is included in the pacakge. However, this module uses the Adafruit Python GPIO https://github.com/adafruit/Adafruit_Python_GPIO.
+This package requires numpy and pandas to run. Besides, it uses the Adafruit BMP280 python library (originating from https://github.com/bastienwirtz/Adafruit_Python_BMP). This file is included in the package. However, this module uses the Adafruit Python GPIO https://github.com/adafruit/Adafruit_Python_GPIO.
 To install it: clone the Adafruit Python GPIO repository and install it with:
 ```sh
 $ git clone https://github.com/adafruit/Adafruit_Python_GPIO.git
@@ -22,7 +22,7 @@ $ sudo python setup.py install
 ```
 
 ##### Logger
-Navigate to the diretory and run the pip install with the -e flag (in case of own changes to the package)
+Navigate to the directory and run the pip install with the -e flag (or not - just useful in case of own changes to the package)
 ```sh
 $ pip install -e .
 ```
@@ -33,7 +33,7 @@ Beware, which SMBUS is used (check with i2cdetect). The OrangePi uses SMBUS(0) (
 
 ### Example Run
 
-To start the logging, just navigate to the main directory and start the main.py. It keeps the daemon threads running until the main thread gets killed by a kill command or a Keyboard Intteruption (CTRL-C) applies.
+To start the logging, just navigate to the main directory and start the main.py. It keeps the daemon threads running until the main thread gets killed by a kill command or a Keyboard Interuption (CTRL-C) applies.
 ```sh
 $ python main.py
 ```
